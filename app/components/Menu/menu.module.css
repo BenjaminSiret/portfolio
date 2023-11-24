@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.burger {
+  cursor: pointer;
+  margin-left: auto;
+}

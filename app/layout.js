@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import { GeistSans } from 'geist/font/sans';
+import Menu from 'app/components/Menu/menu'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,7 +13,10 @@ export const metadata = {
 export default function RootLayout ({ children }) {
   return (
     <html lang="fr" className={GeistSans.className}>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Menu/>
+        {children}
+      </body>
     </html>
   )
 }
