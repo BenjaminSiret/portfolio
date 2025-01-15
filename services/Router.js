@@ -48,9 +48,9 @@ const Router = {
     }
 
     if (component) {
-      const cache = document.querySelector("main");
-      cache.innerHTML = "";
-      cache.appendChild(component);
+      const main = document.querySelector("main");
+      main.innerHTML = "";
+      main.appendChild(component);
       window.scrollTo(0, 0);
     }
   },
