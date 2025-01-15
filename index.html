@@ -1,28 +1,58 @@
-<DOCTYPE html> </DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Portfolio de Benjamin Siret | Développeur Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="index.js" defer></script>
+
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <nav></nav>
-      <h1>Benjamin Siret</h1>
-      <p>Développeur Web</p>
+      <nav role="navigation" class="nav-main">
+        <ul role="navigation-menu" class="nav-main__list">
+          <li>
+            <a href="/"><img src="assets/icons/html.svg" alt="" /></a>
+          </li>
+          <div class="nav-main__links">
+            <li><a href="#background">Parcours</a></li>
+            <li><a href="#philosophy">Philosophie</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
+        </ul>
+      </nav>
     </header>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Benjamin Siret</h1>
+        <p class="subtitle">Développeur Web</p>
+      </div>
+      <img
+        src="assets/images/photo-benjamin.png"
+        alt="Photo de Benjamin Siret"
+        class="hero-image masque-fondu"
+        width="100"
+        height="100"
+      />
+    </section>
     <main>
-      <section id="about">
-        <h2>À propos</h2>
-        <p>
-          Je suis un développeur Front-end passionné par la création d'applications web performantes et accessibles.
-          Avec une expertise en JavaScript moderne et une solide expérience en éducation populaire, j'allie une approche
-          centrée sur l'utilisateur et une communication claire. Curieux et rigoureux, je maîtrise les frameworks
-          (React, Vue.js) tout en privilégiant les fondamentaux du développement web.
-        </p>
-      </section>
       <section id="background">
+        <nav class="nav-breadcrumb" aria-label="fil d'ariane">
+          <ol class="nav-breadcrumb__list">
+            <li><a href="/">Accueil</a></li>
+            <li class="nav-breadcrumb__separator">›</li>
+            <li aria-current="page">Parcours</li>
+          </ol>
+        </nav>
         <h2>Expérience et parcours</h2>
         Mon parcours combine une formation technique avec une expérience significative de 2 ans chez Remixt (remixt.co),
         où j'ai notamment : - Développé des solutions multilingues optimisées - Conçu une API RESTful sécurisée - Créé
@@ -56,7 +86,7 @@
         </p>
       </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
       <section id="about-site">
         <h3>À propos de ce portfolio</h3>
         <p>
@@ -64,6 +94,93 @@
           <br />
           Cela reflète ma conviction qu'une compréhension approfondie des fondamentaux est essentielle pour tout
           développeur web.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum
+          similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur
+          nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias
+          veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit
+          ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis
+          incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate
+          praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique
+          saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi
+          aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis
+          hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta
+          quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero
+          molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt
+          reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium
+          perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus,
+          voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum
+          similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur
+          nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias
+          veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit
+          ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis
+          incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate
+          praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique
+          saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi
+          aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis
+          hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta
+          quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero
+          molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt
+          reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium
+          perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus,
+          voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum
+          similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur
+          nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias
+          veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit
+          ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis
+          incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate
+          praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique
+          saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi
+          aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis
+          hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta
+          quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero
+          molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt
+          reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium
+          perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus,
+          voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum
+          similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur
+          nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias
+          veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit
+          ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis
+          incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate
+          praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem
+          ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique
+          saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi
+          aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis
+          hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta
+          quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero
+          molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt
+          reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium
+          perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum similique saepe accusamus,
+          voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur nisi aliquam placeat illo.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias veritatis hic, voluptatum
+          similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit ab dicta quis consectetur
+          nisi aliquam placeat illo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex vero molestias
+          veritatis hic, voluptatum similique saepe accusamus, voluptate praesentium perferendis incidunt reprehenderit
+          ab dicta quis consectetur nisi aliquam placeat illo.
         </p>
       </section>
     </footer>

@@ -1,0 +1,141 @@
+:root {
+  --background-primary: #3e5879;
+  --background-secondary: #213555;
+  --text-primary: #f5efe7;
+  --text-secondary: #d9c8bd;
+  --border-radius: 0.25rem;
+  --header-height: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variante Regular */
+@font-face {
+  font-family: "Sporting Grotesque";
+  src: url("../assets/fonts/sportinggrotesque-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/sportinggrotesque-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variante Bold */
+@font-face {
+  font-family: "Sporting Grotesque";
+  src: url("../assets/fonts/sportinggrotesque-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/sportinggrotesque-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: normal;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  padding: 2.8125rem 0;
+}
+
+/* Navigation */
+
+.nav-main {
+  border-top: 0.0625rem solid var(--text-primary);
+  padding-top: 1.5rem;
+}
+
+.nav-main__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-right: 3.75rem;
+}
+
+.nav-main__links {
+  display: flex;
+  gap: 3.75rem;
+}
+
+.nav-main__links a,
+.nav-breadcrumb a {
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.nav-main__links a:hover,
+.nav-breadcrumb a:hover {
+  color: var(--text-secondary);
+  border-bottom: 0.0625rem solid var(--text-secondary);
+}
+
+.nav-breadcrumb {
+  margin-bottom: 2rem;
+}
+
+.nav-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-breadcrumb__separator {
+  color: var(--text-secondary);
+}
+
+.nav-breadcrumb a {
+  color: var(--text-secondary);
+}
+
+.nav-breadcrumb [aria-current="page"] {
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.hero {
+  margin: clamp(4rem, 9vh, 12rem) 0;
+}
+
+.hero-image {
+  width: min(350px, 30%);
+  height: auto;
+  margin-left: clamp(2rem, 5vw, 4rem);
+}
+
+.masque-fondu {
+  -webkit-mask: linear-gradient(to bottom, var(--background-primary) 65%, transparent);
+  mask: linear-gradient(to bottom, var(--background-primary) 65%, transparent);
+}
+
+.hero-text {
+  flex: 2;
+  text-align: right;
+}
+
+h1 {
+  font-family: "Sporting Grotesque", sans-serif;
+  font-weight: bold;
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: "Sporting Grotesque", sans-serif;
+  font-weight: normal;
+  font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+  color: var(--text-secondary);
+}
