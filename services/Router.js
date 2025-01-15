@@ -8,14 +8,14 @@ const Router = {
     });
     // event handler for URL changes
     window.addEventListener("popstate", (event) => {
-      Router.go(event.state.route, false);
+      const route = event.state?.route || location.pathname;
+      Router.go(route, false);
     });
 
     // check the initial route
-    Router.go(location.pathname);
+    Router.go(location.pathname, false);
   },
   go: (route, addToHistory = true) => {
-    console.log(route);
     if (addToHistory) {
       history.pushState({ route }, "", route);
     }
@@ -51,8 +51,7 @@ const Router = {
       const cache = document.querySelector("main");
       cache.innerHTML = "";
       cache.appendChild(component);
-      window.scrollX = 0;
-      window.scrollY = 0;
+      window.scrollTo(0, 0);
     }
   },
 };
