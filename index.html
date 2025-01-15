@@ -5,7 +5,7 @@
     <title>Portfolio de Benjamin Siret | Développeur Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="index.js" defer></script>
+    <script src="index.js" type="module" defer></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,40 +19,43 @@
     <header>
       <nav role="navigation" class="nav-main">
         <ul role="navigation-menu" class="nav-main__list">
-          <li>
+          <li class="nav-main__item--logo">
             <a href="/"><img src="assets/icons/html.svg" alt="" /></a>
           </li>
-          <div class="nav-main__links">
-            <li><a href="#background">Parcours</a></li>
-            <li><a href="#philosophy">Philosophie</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </div>
+          <li><a href="/background" class="nav-main__item">Parcours</a></li>
+          <li><a href="/philosophy" class="nav-main__item">Philosophie</a></li>
+          <li><a href="/projects" class="nav-main__item">Projets</a></li>
+          <li><a href="/contact" class="nav-main__item">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Benjamin Siret</h1>
-        <p class="subtitle">Développeur Web</p>
-      </div>
-      <img
-        src="assets/images/photo-benjamin.png"
-        alt="Photo de Benjamin Siret"
-        class="hero-image masque-fondu"
-        width="100"
-        height="100"
-      />
-    </section>
-    <main>
+
+    <main></main>
+    <template id="template-hero">
+      <section class="hero" id="hero">
+        <div class="hero-text">
+          <h1>Benjamin Siret</h1>
+          <p class="subtitle">Développeur Web</p>
+        </div>
+        <img
+          src="assets/images/photo-benjamin.png"
+          alt="Photo de Benjamin Siret"
+          class="hero-image masque-fondu"
+          width="100"
+          height="100"
+        />
+      </section>
+    </template>
+
+    <template id="template-background">
       <section id="background">
-        <nav class="nav-breadcrumb" aria-label="fil d'ariane">
+        <!-- <nav class="nav-breadcrumb" aria-label="fil d'ariane">
           <ol class="nav-breadcrumb__list">
-            <li><a href="/">Accueil</a></li>
+            <li><a href="#hero">Accueil</a></li>
             <li class="nav-breadcrumb__separator">›</li>
             <li aria-current="page">Parcours</li>
           </ol>
-        </nav>
+        </nav> -->
         <h2>Expérience et parcours</h2>
         Mon parcours combine une formation technique avec une expérience significative de 2 ans chez Remixt (remixt.co),
         où j'ai notamment : - Développé des solutions multilingues optimisées - Conçu une API RESTful sécurisée - Créé
@@ -60,6 +63,9 @@
         expérience m'a permis de développer une expertise particulière dans la création d'interfaces utilisateur
         performantes et la gestion de données complexes.
       </section>
+    </template>
+
+    <template id="template-philosophy">
       <section id="philosophy">
         <h2>Philosophie</h2>
         <p>
@@ -70,6 +76,9 @@
           développement.
         </p>
       </section>
+    </template>
+
+    <template id="template-projects">
       <section id="projects">
         <h2>Projets</h2>
         <p>
@@ -77,6 +86,9 @@
           mentale.
         </p>
       </section>
+    </template>
+
+    <template id="template-contact">
       <section id="contact">
         <h2>Contact</h2>
         <p>
@@ -85,8 +97,9 @@
           projets ou défis techniques.
         </p>
       </section>
-    </main>
-    <footer role="contentinfo">
+    </template>
+
+    <!-- <footer role="contentinfo">
       <section id="about-site">
         <h3>À propos de ce portfolio</h3>
         <p>
@@ -183,6 +196,6 @@
           ab dicta quis consectetur nisi aliquam placeat illo.
         </p>
       </section>
-    </footer>
+    </footer> -->
   </body>
 </html>
