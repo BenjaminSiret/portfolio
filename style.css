@@ -104,12 +104,20 @@ h1::before {
 
 .h1__subtext {
   font-family: var(--font-secondary);
-  font-size: clamp(40px, 28.608px + 5vw, 96px);
+  font-size: clamp(2.5rem, 28.608px + 5vw, 6rem);
   margin-top: 48px;
 }
 
 #intro {
-  margin-block-start: 16vh;
+  margin-block-start: clamp(6vh, 4vh + 5.5vw, 20vh);
+}
+
+#about {
+  margin-block-start: 10vh;
+}
+.test {
+  width: 100%;
+  max-width: 600px;
 }
 
 @media (min-width: 768px) {
@@ -119,5 +127,11 @@ h1::before {
 
   #nav-desktop ul {
     display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  #intro {
+    margin-block-start: 30vh;
   }
 }
