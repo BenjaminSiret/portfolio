@@ -2,6 +2,7 @@
   /* Couleurs */
 
   --background-color-primary: #212722;
+  --background-color-secondary: rgba(217, 217, 217, 0.3);
   --text-color-primary: #fef6e6;
   --text-color-secondary: #f1a63b;
   --border-color-primary--opacity: rgba(254, 246, 230, 0.5);
@@ -13,7 +14,7 @@
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
+  --font-size-xl: 1.5rem;
   --font-size-xxl: 2.875rem;
 
   --font-weight-light: 400;
@@ -44,13 +45,41 @@ a {
 }
 
 /* Navigation */
-nav {
+#nav-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.0625rem solid var(--border-color-primary--opacity);
   padding: 1rem;
 }
+
+#nav-desktop {
+  padding: 3.3rem 3.3rem 0;
+}
+#nav-desktop ul {
+  display: none;
+  list-style: none;
+  align-items: first baseline;
+  gap: 1rem;
+}
+
+.home-link {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-secondary);
+  margin-right: 1.875rem;
+}
+
+.nav-desktop-item {
+  padding: 0.7rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-desktop-item:hover {
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-secondary);
+}
+/************/
 
 main {
   padding: 0 clamp(16px, 9vw, 144px);
@@ -80,5 +109,15 @@ h1::before {
 }
 
 #intro {
-  margin-block-start: 15vh;
+  margin-block-start: 16vh;
+}
+
+@media (min-width: 768px) {
+  #nav-mobile {
+    display: none;
+  }
+
+  #nav-desktop ul {
+    display: flex;
+  }
 }
