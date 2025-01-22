@@ -85,16 +85,26 @@ main {
   padding: 0 clamp(16px, 9vw, 144px);
 }
 
-h1 {
+.h1-subtext {
+  font-family: var(--font-secondary);
+  font-size: clamp(2.5rem, 28.608px + 5vw, 6rem);
+  margin-block-start: 3rem;
+}
+
+section {
+  margin: 4rem 0;
+}
+.section-title {
   font-family: var(--font-primary);
-  font-size: clamp(20px, 14.432px + 1.739vw, 36px);
+  font-size: clamp(1.25rem, 14.432px + 1.739vw, 2.25rem);
   font-weight: var(--font-weight-light);
   color: var(--text-color-secondary);
   display: flex;
   gap: 8px;
+  margin: 3rem 0 2rem;
 }
 
-h1::before {
+.section-title::before {
   content: "";
   margin-top: 0.8em;
   width: 2.25rem;
@@ -102,22 +112,31 @@ h1::before {
   background-color: var(--text-color-primary);
 }
 
-.h1__subtext {
-  font-family: var(--font-secondary);
-  font-size: clamp(2.5rem, 28.608px + 5vw, 6rem);
-  margin-top: 48px;
-}
-
 #intro {
   margin-block-start: clamp(6vh, 4vh + 5.5vw, 20vh);
 }
 
-#about {
-  margin-block-start: 10vh;
+.section-description {
+  margin-block-start: 7vh;
+  line-height: 1.6rem;
 }
+
+.quote {
+  font-family: var(--font-secondary);
+  font-size: clamp(1.25rem, 14.432px + 1.739vw, 2.25rem);
+  font-weight: var(--font-weight-bold);
+}
+
+.quote footer {
+  margin-block-start: 0.6rem;
+  font-weight: 400;
+  font-size: var(--font-size-lg);
+}
+
 .test {
   width: 100%;
   max-width: 600px;
+  margin-block-end: 20px;
 }
 
 @media (min-width: 768px) {
