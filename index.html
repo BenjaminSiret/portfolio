@@ -20,7 +20,7 @@
       </nav>
       <nav id="nav-desktop">
         <ul>
-          <li><a href="#intro" class="home-link">Benjamin</a></li>
+          <li><a href="/" class="home-link">Benjamin</a></li>
           <li><a href="#about" class="nav-desktop-item">A propos</a></li>
           <li><a href="#background" class="nav-desktop-item">Parcours</a></li>
           <li><a href="#projects" class="nav-desktop-item">Projets</a></li>
@@ -35,8 +35,8 @@
       </section>
       <section id="about">
         <img src="./assets/images/photo-benjamin.webp" alt="photographie de Benjamin" class="portrait" />
-        <div>
-          <h2 class="section-title">A propos</h2>
+        <div class="about-content">
+          <h2 class="section-title about-title">A propos</h2>
           <p class="section-description">
             Développeur frontend passionné par l'art de faire plus avec moins. Je crois en la puissance de la simplicité
             et en l'importance de créer des expériences web qui fonctionnent pour tous. Un bon code n’est pas celui qui
@@ -45,11 +45,14 @@
         </div>
       </section>
       <section id="background">
-        <h2 class="section-title">Parcours</h2>
-        <blockquote>
-          <p>“La connaissance s’acquiert par l’expérience, tout le reste n’est que de l’information.”</p>
-          <footer>A.Einstein</footer>
-        </blockquote>
+        <div>
+          <img src="./assets/images/geometric_shape.svg" alt="geometric shape" class="geometric-shape" />
+          <h2 class="section-title">Parcours</h2>
+          <blockquote>
+            <p>“La connaissance s’acquiert par l’expérience, tout le reste n’est que de l’information.”</p>
+            <footer>A.Einstein</footer>
+          </blockquote>
+        </div>
         <p class="section-description">
           Mon parcours dans le développement web n’est pas des plus classiques.
           <br />
@@ -132,6 +135,6 @@
         </address>
       </section>
     </main>
-    <footer>© 2025 Benjamin Siret. Tous droits réservés.</footer>
+    <footer class="footer">© 2025 Benjamin Siret. Tous droits réservés.</footer>
   </body>
 </html>

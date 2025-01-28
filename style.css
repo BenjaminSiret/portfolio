@@ -28,6 +28,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--background-color-primary);
@@ -45,16 +48,24 @@ a {
 }
 
 /* Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--background-color-primary);
+}
 #nav-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-color-primary--opacity);
+  border-bottom: 0.0625rem solid var(--border-color-primary--opacity);
   padding: 1rem;
+  background-color: var(--background-color-primary);
 }
 
 #nav-desktop {
-  padding: 3.3rem 3.3rem 0;
+  padding: 3.3rem 3.3rem 0.5rem;
+  background-color: var(--background-color-primary);
 }
 #nav-desktop ul {
   display: none;
@@ -71,7 +82,7 @@ a {
 }
 
 .nav-desktop-item {
-  padding: 11.2px;
+  padding: 0.7rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -82,7 +93,7 @@ a {
 /************/
 
 main {
-  padding: 0 clamp(1rem, 9vw, 9rem);
+  padding: 0 clamp(1rem, 7vw, 6rem);
 }
 
 .h1-subtext {
@@ -92,8 +103,9 @@ main {
 }
 
 section {
-  margin: 4rem 0;
+  margin: 6rem 0;
 }
+
 .section-title {
   font-family: var(--font-primary);
   font-size: clamp(1.25rem, 0.802rem + 1.739vw, 2rem);
@@ -117,7 +129,7 @@ section {
 }
 
 .section-description {
-  margin-block-start: 7vh;
+  margin-block-start: 6vh;
   line-height: 1.6rem;
   font-size: clamp(1rem, 0.613rem + 1.739vw, 1.5rem);
 }
@@ -127,6 +139,7 @@ blockquote,
   font-family: var(--font-secondary);
   font-size: clamp(1.25rem, 0.902rem + 1.7vw, 2rem);
   font-weight: var(--font-weight-bold);
+  max-width: 30.625rem;
 }
 
 blockquote footer {
@@ -139,6 +152,7 @@ blockquote footer {
   width: 100%;
   max-width: 37.5rem;
   margin-block-end: 1.25rem;
+  object-fit: cover;
 }
 .projects-cards {
   margin-block-start: 7vh;
@@ -156,6 +170,10 @@ article {
 article img {
   width: 100%;
   object-fit: cover;
+}
+
+.geometric-shape {
+  display: none;
 }
 
 .project-info {
@@ -191,10 +209,10 @@ dd {
   margin-block-start: 0.25rem;
 }
 
-footer {
+.footer {
   text-align: center;
   padding: 1rem;
-  margin-block-start: 7rem;
+  margin-block-start: 9rem;
 }
 @media (min-width: 48rem) {
   #nav-mobile {
@@ -204,10 +222,55 @@ footer {
   #nav-desktop ul {
     display: flex;
   }
+
+  #intro,
+  #background,
+  #projects,
+  #contact {
+    margin-block-start: 25vh;
+    scroll-margin-top: 25vh;
+  }
+
+  #about {
+    display: flex;
+    gap: 2rem;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    gap: 2rem;
+    margin-block-start: 25vh;
+    scroll-margin-top: 25vh;
+  }
+
+  .portrait {
+    max-width: 50rem;
+    margin-block-end: 0;
+    flex: 1;
+  }
+
+  .about-content {
+    flex: 1;
+    padding-top: 3rem;
+  }
+
+  .about-title {
+    padding-left: 3.5rem;
+  }
+
+  .about-content > p {
+    line-height: 2.2rem;
+    margin-block-start: 12vh;
+    padding-left: 1.5rem;
+  }
+
+  #background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .geometric-shape {
+    display: block;
+  }
 }
 
 @media (min-width: 90rem) {
-  #intro {
-    margin-block-start: 30vh;
-  }
 }
