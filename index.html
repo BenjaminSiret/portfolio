@@ -11,32 +11,44 @@
     />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav id="nav-mobile">
-        <a href="/">Benjamin</a>
-        <img src="./assets/icons/menu-icon.svg" alt="menu icon" />
-      </nav>
-      <nav id="nav-desktop">
+    <nav id="nav-mobile" aria-label="Navigation mobile">
+      <a href="/" tabindex="1">Benjamin</a>
+      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+        <img src="./assets/icons/menu-icon.svg" alt="Icône du menu" aria-hidden="true" />
+      </button>
+    </nav>
+    <div class="menu-mobile">
+      <nav aria-label="Menu mobile">
         <ul>
-          <li><a href="/" class="home-link">Benjamin</a></li>
-          <li><a href="#about" class="nav-desktop-item">A propos</a></li>
-          <li><a href="#background" class="nav-desktop-item">Parcours</a></li>
-          <li><a href="#projects" class="nav-desktop-item">Projets</a></li>
-          <li><a href="#contact" class="nav-desktop-item">Contact</a></li>
+          <li><a href="#about" class="menu-mobile-item">À propos</a></li>
+          <li><a href="#background" class="menu-mobile-item">Parcours</a></li>
+          <li><a href="#projects" class="menu-mobile-item">Projets</a></li>
+          <li><a href="#contact" class="menu-mobile-item">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+    <nav id="nav-desktop">
+      <ul>
+        <li><a href="/" class="home-link">Benjamin</a></li>
+        <li><a href="#about" class="nav-desktop-item">À propos</a></li>
+        <li><a href="#background" class="nav-desktop-item">Parcours</a></li>
+        <li><a href="#projects" class="nav-desktop-item">Projets</a></li>
+        <li><a href="#contact" class="nav-desktop-item">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="overlay"></div>
     <main>
       <section id="intro">
         <h1 class="section-title">Bienvenue,</h1>
         <p class="h1-subtext">Je suis Benjamin, développeur frontend. Engagé pour un web simple et accessible.</p>
       </section>
       <section id="about">
-        <img src="./assets/images/photo-benjamin.webp" alt="photographie de Benjamin" class="portrait" />
+        <img src="./assets/images/photo-benjamin.webp" alt="Photographie de Benjamin" class="portrait" />
         <div class="about-content">
-          <h2 class="section-title about-title">A propos</h2>
+          <h2 class="section-title about-title">À propos</h2>
           <p class="section-description">
             Développeur frontend passionné par l'art de faire plus avec moins. Je crois en la puissance de la simplicité
             et en l'importance de créer des expériences web qui fonctionnent pour tous. Un bon code n’est pas celui qui
@@ -46,7 +58,6 @@
       </section>
       <section id="background">
         <div>
-          <img src="./assets/images/geometric_shape.svg" alt="geometric shape" class="geometric-shape" />
           <h2 class="section-title">Parcours</h2>
           <blockquote>
             <p>“La connaissance s’acquiert par l’expérience, tout le reste n’est que de l’information.”</p>
@@ -75,31 +86,31 @@
         </blockquote>
         <div class="projects-cards">
           <article>
-            <img src="./assets/images/projet.jpg" width="300px" alt="" />
+            <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
             <div class="project-info">
               <h3>Titre du projet</h3>
-              <a href=""><img src="./assets/icons/github-icon.svg" alt="github icon" width="24px" height="24px" /></a>
+              <a href=""><img src="./assets/icons/github-icon.svg" alt="Icône GitHub" width="24px" height="24px" /></a>
             </div>
           </article>
           <article>
-            <img src="./assets/images/projet.jpg" width="300px" alt="" />
+            <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
             <div class="project-info">
               <h3>Titre du projet</h3>
-              <a href=""><img src="./assets/icons/github-icon.svg" alt="github icon" width="24px" height="24px" /></a>
+              <a href=""><img src="./assets/icons/github-icon.svg" alt="Icône GitHub" width="24px" height="24px" /></a>
             </div>
           </article>
           <article>
-            <img src="./assets/images/projet.jpg" width="300px" alt="" />
+            <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
             <div class="project-info">
               <h3>Titre du projet</h3>
-              <a href=""><img src="./assets/icons/github-icon.svg" alt="github icon" width="24px" height="24px" /></a>
+              <a href=""><img src="./assets/icons/github-icon.svg" alt="Icône GitHub" width="24px" height="24px" /></a>
             </div>
           </article>
           <article>
-            <img src="./assets/images/projet.jpg" width="300px" alt="" />
+            <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
             <div class="project-info">
               <h3>Titre du projet</h3>
-              <a href=""><img src="./assets/icons/github-icon.svg" alt="github icon" width="24px" height="24px" /></a>
+              <a href=""><img src="./assets/icons/github-icon.svg" alt="Icône GitHub" width="24px" height="24px" /></a>
             </div>
           </article>
         </div>

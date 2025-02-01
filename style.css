@@ -15,7 +15,7 @@
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.5rem;
-  --font-size-xxl: 2.875rem;
+  --font-size-xxl: 1.875rem;
 
   --font-weight-light: 400;
   --font-weight-regular: 500;
@@ -47,13 +47,14 @@ a {
   text-decoration: none;
 }
 
-/* Navigation */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: var(--background-color-primary);
+a:focus-visible,
+button:focus-visible {
+  outline: 0.125rem solid var(--text-color-secondary);
+  outline-offset: 0.125rem;
+  border-radius: 0.125rem;
 }
+
+/* Navigation */
 #nav-mobile {
   display: flex;
   justify-content: space-between;
@@ -63,12 +64,65 @@ header {
   background-color: var(--background-color-primary);
 }
 
+.menu-mobile {
+  position: fixed;
+  font-size: var(--font-size-xxl);
+  font-family: var(--font-secondary);
+  padding: 2rem;
+  width: 80%;
+  height: 100%;
+  right: 0;
+  background-color: var(--text-color-primary);
+  color: var(--background-color-primary);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+}
+
+.menu-mobile:not(.menu-mobile-open) {
+  visibility: hidden;
+}
+
+.menu-mobile li {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
+#menu-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.menu-mobile-open {
+  transform: translateX(0);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.overlay-open {
+  display: block;
+}
+
 #nav-desktop {
+  display: none;
   padding: 3.3rem 3.3rem 0.5rem;
   background-color: var(--background-color-primary);
 }
 #nav-desktop ul {
-  display: none;
+  display: flex;
   list-style: none;
   align-items: first baseline;
   gap: 1rem;
@@ -125,7 +179,7 @@ section {
 }
 
 #intro {
-  margin-block-start: clamp(6vh, 4vh + 5.5vw, 20vh);
+  margin-block-start: clamp(6vh, 12vh, 20vh);
 }
 
 .section-description {
@@ -219,7 +273,7 @@ dd {
     display: none;
   }
 
-  #nav-desktop ul {
+  #nav-desktop {
     display: flex;
   }
 
@@ -265,10 +319,6 @@ dd {
   #background {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .geometric-shape {
-    display: block;
   }
 }
 
