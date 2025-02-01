@@ -54,6 +54,22 @@ button:focus-visible {
   border-radius: 0.125rem;
 }
 
+.download-link {
+  float: right;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 0.125rem solid var(--background-color-secondary);
+  color: var(--text-color-primary);
+  font-size: clamp(1rem, 0.613rem + 1vw, 1.25rem);
+  border-radius: 0.25rem;
+  transition: 0.3s ease;
+}
+
+.download-link:hover {
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-secondary);
+}
+
 /* Navigation */
 #nav-mobile {
   display: flex;
@@ -288,9 +304,6 @@ dd {
   #about {
     display: flex;
     gap: 2rem;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-    gap: 2rem;
     margin-block-start: 25vh;
     scroll-margin-top: 25vh;
   }
@@ -319,6 +332,14 @@ dd {
   #background {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .download-link {
+    grid-column: 2;
+    max-width: 18.75rem;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 3.75rem;
   }
 }
 

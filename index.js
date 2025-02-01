@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // gestion du menu mobile
-
   const menuToggle = document.querySelector("#menu-toggle");
   const menuMobile = document.querySelector(".menu-mobile");
   const overlay = document.querySelector(".overlay");
