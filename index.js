@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector("#menu-toggle");
-  const menuMobile = document.querySelector(".menu-mobile");
+  const menuMobile = document.querySelector(".menu__mobile");
   const overlay = document.querySelector(".overlay");
-  const menuMobileItems = document.querySelectorAll(".menu-mobile-item");
+  const menuMobileItems = document.querySelectorAll(".menu__mobile__item");
   const body = document.body;
 
   const toggleMenu = () => {
-    const isExpanded = menuMobile.classList.contains("menu-mobile-open");
+    const isExpanded = menuMobile.classList.contains("menu__mobile-open");
 
-    menuMobile.classList.toggle("menu-mobile-open");
+    menuMobile.classList.toggle("menu__mobile-open");
     overlay.classList.toggle("overlay-open");
     body.classList.toggle("body-no-scroll");
     menuToggle.setAttribute("aria-expanded", !isExpanded);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", toggleMenu);
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menuMobile.classList.contains("menu-mobile-open")) {
+    if (e.key === "Escape" && menuMobile.classList.contains("menu__mobile-open")) {
       toggleMenu();
     }
   });
