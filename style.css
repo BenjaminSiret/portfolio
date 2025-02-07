@@ -5,18 +5,16 @@
   --background-color-secondary: rgba(217, 217, 217, 0.3);
   --text-color-primary: #fef6e6;
   --text-color-secondary: #f1a63b;
-  --border-color-primary--opacity: rgba(254, 246, 230, 0.5);
+  --border-color-primary-opacity: rgba(254, 246, 230, 0.5);
 
   /* Polices */
   --font-primary: "Atkinson Hyperlegible", Arial, sans-serif;
   --font-secondary: "Syne", Tahoma, sans-serif;
-
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.5rem;
   --font-size-xxl: 1.875rem;
-
   --font-weight-light: 400;
   --font-weight-regular: 500;
   --font-weight-medium: 600;
@@ -28,6 +26,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -240,6 +239,7 @@ blockquote footer {
 .about__description {
   opacity: 0;
 }
+
 article {
   display: flex;
   flex-direction: column;
