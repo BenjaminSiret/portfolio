@@ -15,44 +15,44 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <nav id="nav__mobile" aria-label="Navigation mobile">
+    <nav id="nav-mobile" aria-label="Navigation mobile">
       <a href="/">Benjamin</a>
-      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu__mobile">
+      <button id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
         <img src="./assets/icons/menu-icon.svg" alt="Icône du menu" aria-hidden="true" />
       </button>
     </nav>
-    <div class="menu__mobile">
+    <div class="menu-mobile">
       <nav aria-label="Menu mobile">
         <ul>
-          <li><a href="#about" class="menu__mobile__item">À propos</a></li>
-          <li><a href="#background" class="menu__mobile__item">Parcours</a></li>
-          <li><a href="#projects" class="menu__mobile__item">Projets</a></li>
-          <li><a href="#contact" class="menu__mobile__item">Contact</a></li>
+          <li><a href="#about" class="menu-mobile-item">À propos</a></li>
+          <li><a href="#background" class="menu-mobile-item">Parcours</a></li>
+          <li><a href="#projects" class="menu-mobile-item">Projets</a></li>
+          <li><a href="#contact" class="menu-mobile-item">Contact</a></li>
         </ul>
       </nav>
     </div>
     <nav id="nav-desktop">
       <ul>
-        <li><a href="/" class="home__link">Benjamin</a></li>
-        <li><a href="#about" class="nav__desktop__item">À propos</a></li>
-        <li><a href="#background" class="nav__desktop__item">Parcours</a></li>
-        <li><a href="#projects" class="nav__desktop__item">Projets</a></li>
-        <li><a href="#contact" class="nav__desktop__item">Contact</a></li>
+        <li><a href="/" class="home-link">Benjamin</a></li>
+        <li><a href="#about" class="nav-desktop-item">À propos</a></li>
+        <li><a href="#background" class="nav-desktop-item">Parcours</a></li>
+        <li><a href="#projects" class="nav-desktop-item">Projets</a></li>
+        <li><a href="#contact" class="nav-desktop-item">Contact</a></li>
       </ul>
     </nav>
     <div class="overlay"></div>
     <main>
       <section id="intro">
-        <h1 id="intro__title" class="section__title fade-in-right">Bienvenue,</h1>
-        <p class="intro__subtext fade-in-right-delay-1">
+        <h1 id="intro-title" class="section-title fade-in-right">Bienvenue,</h1>
+        <p class="intro-subtext fade-in-right-delay-1">
           Je suis Benjamin, développeur frontend. Engagé pour un web simple et accessible.
         </p>
       </section>
       <section id="about">
         <img src="./assets/images/photo-benjamin.webp" alt="Photographie de Benjamin" class="portrait" />
-        <div class="about__content">
-          <h2 class="section__title about__title">À propos</h2>
-          <p class="section__description about__description">
+        <div class="about-content">
+          <h2 class="section-title about-title">À propos</h2>
+          <p class="section-description about-description">
             Développeur frontend passionné par l'art de faire plus avec moins. Je crois en la puissance de la simplicité
             et en l'importance de créer des expériences web qui fonctionnent pour tous. Un bon code n’est pas celui qui
             impressionne mais celui qui facilite la vie des utilisateurs.
@@ -60,15 +60,15 @@
         </div>
       </section>
       <section id="background">
-        <div class="section__header background__header">
+        <div class="section-header background-header">
           <img src="./assets/images/geometric_shape.svg" alt="" class="geometric-shape" />
-          <h2 class="section__title">Parcours</h2>
+          <h2 class="section-title">Parcours</h2>
           <blockquote>
             <p>“La connaissance s’acquiert par l’expérience, tout le reste n’est que de l’information.”</p>
             <footer>A.Einstein</footer>
           </blockquote>
         </div>
-        <p class="section__description background__description">
+        <p class="section-description background-description">
           Mon parcours dans le développement web n’est pas des plus classiques.
           <br />
           Pendant plus d’une décennie j’ai exploré le monde de l’apprentissage et de la communication à travers
@@ -81,24 +81,24 @@
           J’ai pu participer à la modernisation d’une application legacy, implémenter une API RESTful, créer des
           visualisations de données interactives, et tant d’autres choses.
         </p>
-        <a href="./assets/files/CV_Benjamin_Siret.pdf" download="CV_Benjamin_Siret.pdf" class="download__link"
-          ><span class="download__mask"></span>Télécharger mon CV</a
+        <a href="./assets/files/CV_Benjamin_Siret.pdf" download="CV_Benjamin_Siret.pdf" class="download-link"
+          ><span class="download-mask"></span>Télécharger mon CV</a
         >
       </section>
       <section id="projects">
-        <div class="section__header">
+        <div class="section-header">
           <img src="./assets/images/geometric_shape.svg" alt="" class="geometric-shape" />
-          <h2 class="section__title">Projets</h2>
+          <h2 class="section-title">Projets</h2>
           <blockquote>
             <p>“L'obstacle est le chemin.”</p>
             <footer>Marc Aurèle</footer>
           </blockquote>
         </div>
 
-        <div class="projects__cards">
+        <div class="projects-cards">
           <article>
             <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
-            <div class="project__info">
+            <div class="project-info">
               <h3>Titre du projet</h3>
               <a href=""
                 ><svg
@@ -116,7 +116,7 @@
           </article>
           <article>
             <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
-            <div class="project__info">
+            <div class="project-info">
               <h3>Titre du projet</h3>
               <a href=""
                 ><svg
@@ -134,7 +134,7 @@
           </article>
           <article>
             <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
-            <div class="project__info">
+            <div class="project-info">
               <h3>Titre du projet</h3>
               <a href=""
                 ><svg
@@ -152,7 +152,7 @@
           </article>
           <article>
             <img src="./assets/images/projet.jpg" width="300px" alt="Image du projet" />
-            <div class="project__info">
+            <div class="project-info">
               <h3>Titre du projet</h3>
               <a href=""
                 ><svg
@@ -171,9 +171,9 @@
         </div>
       </section>
       <section id="contact">
-        <div class="section__header">
+        <div class="section-header">
           <img src="./assets/images/geometric_shape.svg" alt="" class="geometric-shape" />
-          <h2 class="section__title">Contact</h2>
+          <h2 class="section-title">Contact</h2>
           <p>
             Si vous avez une question, une idée ou un projet à partager, je serai heureux de vous répondre. N'hésitez
             pas à me contacter !
@@ -181,23 +181,23 @@
         </div>
 
         <address>
-          <dl class="contact__info">
-            <div class="address__item">
+          <dl class="contact-info">
+            <div class="address-item">
               <dt>Email</dt>
               <dd><a href="mailto:benjaminsiret@outlook.fr">benjaminsiret@outlook.fr</a></dd>
             </div>
 
-            <div class="address__item">
+            <div class="address-item">
               <dt>Téléphone</dt>
               <dd><a href="tel:+33781267880">+33 7 81 26 78 80</a></dd>
             </div>
 
-            <div class="address__item">
+            <div class="address-item">
               <dt>GitHub</dt>
               <dd><a href="https://github.com/BenjaminSiret" target="_blank">github/BenjaminSiret</a></dd>
             </div>
 
-            <div class="address__item">
+            <div class="address-item">
               <dt>LinkedIn</dt>
               <dd><a href="https://linkedin.com/in/BenjaminSiret" target="_blank">linkedin/BenjaminSiret</a></dd>
             </div>

@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector("#menu-toggle");
-  const menuMobile = document.querySelector(".menu__mobile");
+  const menuMobile = document.querySelector(".menu-mobile");
   const overlay = document.querySelector(".overlay");
-  const menuMobileItems = document.querySelectorAll(".menu__mobile__item");
+  const menuMobileItems = document.querySelectorAll(".menu-mobile-item");
   const body = document.body;
 
   const toggleMenu = () => {
-    const isExpanded = menuMobile.classList.contains("menu__mobile-open");
+    const isExpanded = menuMobile.classList.contains("menu-mobile-open");
 
-    menuMobile.classList.toggle("menu__mobile-open");
+    menuMobile.classList.toggle("menu-mobile-open");
     overlay.classList.toggle("overlay-open");
     body.classList.toggle("body-no-scroll");
     menuToggle.setAttribute("aria-expanded", !isExpanded);
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", toggleMenu);
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && menuMobile.classList.contains("menu__mobile-open")) {
+    if (e.key === "Escape" && menuMobile.classList.contains("menu-mobile-open")) {
       toggleMenu();
     }
   });
@@ -96,15 +96,15 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(element);
   };
 
-  observerElement(".about__title", "fade-in-right", 0.5);
-  observerElement(".about__description", "fade-in-right-delay-1", 0.5);
-  observerElement(".background__description", "fade-in-bottom", 0.5);
+  observerElement(".about-title", "fade-in-right", 0.5);
+  observerElement(".about-description", "fade-in-right-delay-1", 0.5);
+  observerElement(".background-description", "fade-in-bottom", 0.5);
 
   //**************************************************************************
   // Animation du download__link
   //**************************************************************************
 
-  const link = document.querySelector(".download__link");
+  const link = document.querySelector(".download-link");
 
   link.addEventListener("mouseenter", () => {
     link.classList.add("spin-animation");

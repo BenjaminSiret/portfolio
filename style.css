@@ -2,14 +2,14 @@
   /* Couleurs */
 
   --background-color-primary: #212722;
-  --background-color-secondary: rgba(217, 217, 217, 0.3);
+  --background-color-secondary: rgb(217 217 217 / 30%);
   --text-color-primary: #fef6e6;
   --text-color-secondary: #f1a63b;
-  --border-color-primary-opacity: rgba(254, 246, 230, 0.5);
+  --border-color-primary-opacity: rgb(254 246 230 / 50%);
 
   /* Polices */
-  --font-primary: "Atkinson Hyperlegible", Arial, sans-serif;
-  --font-secondary: "Syne", Tahoma, sans-serif;
+  --font-primary: "Atkinson Hyperlegible", arial, sans-serif;
+  --font-secondary: "Syne", tahoma, sans-serif;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
@@ -53,7 +53,7 @@ button:focus-visible {
   border-radius: 0.125rem;
 }
 
-.download__link {
+.download-link {
   float: right;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -65,16 +65,16 @@ button:focus-visible {
 }
 
 /* Navigation */
-#nav__mobile {
+#nav-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.0625rem solid var(--border-color-primary--opacity);
+  border-bottom: 0.0625rem solid var(--border-color-primary-opacity);
   padding: 1rem;
   background-color: var(--background-color-primary);
 }
 
-.menu__mobile {
+.menu-mobile {
   position: fixed;
   font-size: var(--font-size-xxl);
   font-family: var(--font-secondary);
@@ -89,11 +89,11 @@ button:focus-visible {
   z-index: 1000;
 }
 
-.menu__mobile:not(.menu__mobile-open) {
+.menu-mobile:not(.menu-mobile-open) {
   visibility: hidden;
 }
 
-.menu__mobile li {
+.menu-mobile li {
   list-style: none;
   margin-bottom: 2.5rem;
 }
@@ -107,7 +107,7 @@ button:focus-visible {
   border: none;
 }
 
-.menu__mobile-open {
+.menu-mobile-open {
   transform: translateX(0);
 }
 
@@ -118,7 +118,7 @@ button:focus-visible {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 / 50%);
   z-index: 100;
 }
 
@@ -131,6 +131,7 @@ button:focus-visible {
   padding: 3.3rem 3.3rem 0.5rem;
   background-color: var(--background-color-primary);
 }
+
 #nav-desktop ul {
   display: flex;
   list-style: none;
@@ -138,29 +139,30 @@ button:focus-visible {
   gap: 1rem;
 }
 
-.home__link {
+.home-link {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   font-family: var(--font-secondary);
   margin-right: 1.875rem;
 }
 
-.nav__desktop__item {
+.nav-desktop-item {
   padding: 0.7rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav__desktop__item:hover {
+.nav-desktop-item:hover {
   background-color: var(--background-color-secondary);
   color: var(--text-color-secondary);
 }
-/************/
+
+/************ Sections ************/
 
 main {
   padding: 0 clamp(1rem, 7vw, 6rem);
 }
 
-.intro__subtext {
+.intro-subtext {
   font-family: var(--font-secondary);
   font-size: clamp(2.5rem, 1.788rem + 5vw, 6rem);
   margin-block-start: 3rem;
@@ -170,11 +172,11 @@ section {
   margin: 6rem 0;
 }
 
-.section__header {
+.section-header {
   position: relative;
 }
 
-.section__title {
+.section-title {
   font-family: var(--font-primary);
   font-size: clamp(1.25rem, 0.802rem + 1.739vw, 2rem);
   font-weight: var(--font-weight-light);
@@ -184,7 +186,7 @@ section {
   margin: 3rem 0 2rem;
 }
 
-.section__title::before {
+.section-title::before {
   content: "";
   margin-top: 0.8em;
   width: 2.25rem;
@@ -196,17 +198,18 @@ section {
   margin-block-start: clamp(6vh, 12vh, 20vh);
 }
 
-.section__description {
+.section-description {
   margin-block-start: 6vh;
   line-height: 2rem;
   font-size: clamp(1rem, 0.613rem + 1.739vw, 1.5rem);
 }
 
-.background__description {
+.background-description {
   opacity: 0;
 }
+
 blockquote,
-.section__header > p {
+.section-header > p {
   font-family: var(--font-secondary);
   font-size: clamp(1.25rem, 0.902rem + 1.7vw, 2rem);
   font-weight: var(--font-weight-bold);
@@ -232,11 +235,11 @@ blockquote footer {
   animation-range: 200px 800px;
 }
 
-.about__title .projects__cards {
+.about-title .projects-cards {
   margin-block-start: 7vh;
 }
 
-.about__description {
+.about-description {
   opacity: 0;
 }
 
@@ -263,32 +266,33 @@ article img {
   left: -6.25rem;
 }
 
-.project__info {
+.project-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
 
-.project__info a {
+.project-info a {
   display: inline-flex;
 }
 
-.project__info h3 {
+.project-info h3 {
   font-weight: var(--font-weight-light);
 }
 
-.project__info a img {
-  fill: currentColor; /* Utilise la couleur actuelle du texte */
+.project-info a img {
+  fill: currentcolor;
 }
 
 address {
   margin-block-start: 7vh;
 }
 
-.address__item {
+.address-item {
   margin-block-end: 2.1875rem;
 }
+
 dt {
   font-size: clamp(1.125rem, 0.613rem + 1.739vw, 1.5rem);
   color: var(--text-color-secondary);
@@ -305,8 +309,9 @@ dd {
   padding: 1rem;
   margin-block-start: 9rem;
 }
-@media (min-width: 768px) {
-  #nav__mobile {
+
+@media (width >= 768px) {
+  #nav-mobile {
     display: none;
   }
 
@@ -331,17 +336,17 @@ dd {
     flex: 1;
   }
 
-  .about__content {
+  .about-content {
     flex: 1;
     padding-top: 3rem;
   }
 
-  .about__title {
+  .about-title {
     padding-left: 3.5rem;
     opacity: 0;
   }
 
-  .about__content > p {
+  .about-content > p {
     line-height: 2.2rem;
     margin-block-start: 12vh;
     padding-left: 1.5rem;
@@ -354,11 +359,11 @@ dd {
     grid-template-columns: 1fr 1fr;
   }
 
-  .section__description {
+  .section-description {
     padding: 0 1rem;
   }
 
-  .download__link {
+  .download-link {
     grid-column: 2;
     max-width: 18.75rem;
     text-align: center;
@@ -384,9 +389,9 @@ dd {
     min-height: 8.125rem;
   }
 
-  .project__info {
+  .project-info {
     color: var(--text-color-primary);
-    border-top: 0.0625rem solid var(--border-color-primary--opacity);
+    border-top: 0.0625rem solid var(--border-color-primary-opacity);
   }
 
   address {
@@ -401,43 +406,46 @@ dd {
 /* Animations */
 
 .fade-in-bottom {
-  animation: fadeInBottom 1s ease-in-out forwards;
+  animation: fade-in-bottom 1s ease-in-out forwards;
 }
 
 .fade-in-right {
-  animation: fadeInRight 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-right 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .fade-in-right-delay-1 {
-  animation: fadeInRight 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-right 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation-delay: 0.7s;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fade-in-right {
   from {
     opacity: 0;
     transform: translateX(10%);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-@keyframes fadeInBottom {
+@keyframes fade-in-bottom {
   from {
     opacity: 0;
     transform: translateY(10%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -450,8 +458,8 @@ dd {
   inherits: false;
 }
 
-.download__link::after,
-.download__link::before {
+.download-link::after,
+.download-link::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -466,12 +474,12 @@ dd {
   transition: opacity 0.3s ease-out;
 }
 
-.download__link::before {
+.download-link::before {
   filter: blur(1.5rem);
 }
 
-.download__link:hover::after,
-.download__link:hover::before {
+.download-link:hover::after,
+.download-link:hover::before {
   opacity: 1;
 }
 
@@ -484,7 +492,7 @@ dd {
 /* L'animation de sortie */
 .spin-exit::after,
 .spin-exit::before {
-  animation: spinExit 2.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  animation: spin-exit 2.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
 }
 
 @keyframes spin {
@@ -493,7 +501,7 @@ dd {
   }
 }
 
-@keyframes spinExit {
+@keyframes spin-exit {
   to {
     --angle: 360deg;
   }
