@@ -61,13 +61,8 @@ button:focus-visible {
   border: 0.125rem solid var(--background-color-secondary);
   color: var(--text-color-primary);
   font-size: clamp(1rem, 0.613rem + 1vw, 1.25rem);
-  border-radius: 0.25rem;
-  transition: 0.3s ease;
-}
-
-.download__link:hover {
-  background-color: var(--background-color-secondary);
-  color: var(--text-color-secondary);
+  position: relative;
+  background-color: var(--background-color-primary);
 }
 
 /* Navigation */
@@ -208,6 +203,9 @@ section {
   font-size: clamp(1rem, 0.613rem + 1.739vw, 1.5rem);
 }
 
+.background__description {
+  opacity: 0;
+}
 blockquote,
 .section__header > p {
   font-family: var(--font-secondary);
@@ -230,23 +228,18 @@ blockquote footer {
   opacity: 0;
   scale: 0.7;
   transform: translateY(25%);
-  animation: test linear forwards;
+  animation: fadeInBottom linear forwards;
   animation-timeline: view();
   animation-range: 200px 800px;
 }
 
-@keyframes test {
-  to {
-    opacity: 1;
-    scale: 1;
-    transform: translateY(0);
-  }
-}
-
-.projects__cards {
+.about__title .projects__cards {
   margin-block-start: 7vh;
 }
 
+.about__description {
+  opacity: 0;
+}
 article {
   display: flex;
   flex-direction: column;
@@ -345,6 +338,7 @@ dd {
 
   .about__title {
     padding-left: 3.5rem;
+    opacity: 0;
   }
 
   .about__content > p {
@@ -404,33 +398,103 @@ dd {
   }
 }
 
-@media (min-width: 90rem) {
-}
-
 /* Animations */
 
-.fade-in {
+.fade-in-bottom {
   animation: fadeInBottom 1s ease-in-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.fade-in-right-delay-1 {
+  animation: fadeInRight 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation-delay: 0.7s;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0.3;
-    scale: 0.8;
+    opacity: 0;
   }
   to {
     opacity: 1;
-    scale: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 @keyframes fadeInBottom {
   from {
-    opacity: 0.3;
-    transform: translateY(25%);
+    opacity: 0;
+    transform: translateY(10%);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.download__link::after,
+.download__link::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  background-image: conic-gradient(from var(--angle), transparent 70%, var(--text-color-secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.download__link::before {
+  filter: blur(1.5rem);
+}
+
+.download__link:hover::after,
+.download__link:hover::before {
+  opacity: 1;
+}
+
+/* L'animation de rotation continue */
+.spin-animation::after,
+.spin-animation::before {
+  animation: 2.7s spin linear infinite;
+}
+
+/* L'animation de sortie */
+.spin-exit::after,
+.spin-exit::before {
+  animation: spinExit 2.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes spinExit {
+  to {
+    --angle: 360deg;
   }
 }

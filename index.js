@@ -29,6 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //**************************************************************************
+  // Gestion des flèches du clavier
+  //**************************************************************************
+
   menuMobile.addEventListener("keydown", (e) => {
     const currentIndex = Array.from(menuMobileItems).indexOf(document.activeElement);
     let nextIndex;
@@ -66,5 +70,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   menuMobileItems.forEach((item) => {
     item.addEventListener("click", toggleMenu);
+  });
+
+  //**************************************************************************
+  // Observers pour les entrées de texte
+  //**************************************************************************
+
+  const observerElement = (selector, animationClass, delay) => {
+    const element = document.querySelector(selector);
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add(animationClass);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: delay }
+    );
+
+    observer.observe(element);
+  };
+
+  observerElement(".about__title", "fade-in-right", 0.5);
+  observerElement(".about__description", "fade-in-right-delay-1", 0.5);
+  observerElement(".background__description", "fade-in-bottom", 0.5);
+
+  //**************************************************************************
+  // Animation du download__link
+  //**************************************************************************
+
+  const link = document.querySelector(".download__link");
+
+  link.addEventListener("mouseenter", () => {
+    link.classList.add("spin-animation");
+    link.classList.remove("spin-exit");
+  });
+
+  link.addEventListener("mouseleave", () => {
+    link.classList.remove("spin-animation");
+    link.classList.add("spin-exit");
   });
 });

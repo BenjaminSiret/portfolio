@@ -43,14 +43,16 @@
     <div class="overlay"></div>
     <main>
       <section id="intro">
-        <h1 class="section__title">Bienvenue,</h1>
-        <p class="intro__subtext">Je suis Benjamin, développeur frontend. Engagé pour un web simple et accessible.</p>
+        <h1 id="intro__title" class="section__title fade-in-right">Bienvenue,</h1>
+        <p class="intro__subtext fade-in-right-delay-1">
+          Je suis Benjamin, développeur frontend. Engagé pour un web simple et accessible.
+        </p>
       </section>
       <section id="about">
         <img src="./assets/images/photo-benjamin.webp" alt="Photographie de Benjamin" class="portrait" />
         <div class="about__content">
           <h2 class="section__title about__title">À propos</h2>
-          <p class="section__description">
+          <p class="section__description about__description">
             Développeur frontend passionné par l'art de faire plus avec moins. Je crois en la puissance de la simplicité
             et en l'importance de créer des expériences web qui fonctionnent pour tous. Un bon code n’est pas celui qui
             impressionne mais celui qui facilite la vie des utilisateurs.
@@ -58,7 +60,7 @@
         </div>
       </section>
       <section id="background">
-        <div class="section__header">
+        <div class="section__header background__header">
           <img src="./assets/images/geometric_shape.svg" alt="" class="geometric-shape" />
           <h2 class="section__title">Parcours</h2>
           <blockquote>
@@ -66,7 +68,7 @@
             <footer>A.Einstein</footer>
           </blockquote>
         </div>
-        <p class="section__description">
+        <p class="section__description background__description">
           Mon parcours dans le développement web n’est pas des plus classiques.
           <br />
           Pendant plus d’une décennie j’ai exploré le monde de l’apprentissage et de la communication à travers
@@ -80,7 +82,7 @@
           visualisations de données interactives, et tant d’autres choses.
         </p>
         <a href="./assets/files/CV_Benjamin_Siret.pdf" download="CV_Benjamin_Siret.pdf" class="download__link"
-          >Télécharger mon CV</a
+          ><span class="download__mask"></span>Télécharger mon CV</a
         >
       </section>
       <section id="projects">
