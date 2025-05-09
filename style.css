@@ -340,7 +340,94 @@ dd {
   margin-block-start: 9rem;
 }
 
-/* Responsive Design */
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0 0 0 / 90%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.modal-open {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  color: var(--background-color-primary);
+}
+
+.modal-description-container {
+  background-color: var(--text-color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+
+.modal-description {
+  margin-block-start: 1rem;
+  font-size: var(--font-size-lg);
+}
+
+.close-button {
+  position: absolute;
+  padding: 0.0625rem 0.5rem;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Tags - Styles de base */
+.project-tags,
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--background-color-primary);
+  color: var(--text-color-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-secondary);
+  border: 1px solid var(--border-color-primary-opacity-light);
+}
+
+/* Masquer les tags sur mobile */
+.projects-cards .project-tags {
+  display: none;
+}
+
+/* Tags dans la modale */
+.modal-tags {
+  margin: 1rem 0;
+}
+
 @media (width >= 768px) {
   #nav-mobile {
     display: none;
@@ -392,6 +479,12 @@ dd {
   #contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-cards .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .section-description {
@@ -449,6 +542,10 @@ dd {
   }
 
   .project-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     color: var(--text-color-primary);
     padding-top: 0.25rem;
     position: relative;
@@ -483,6 +580,17 @@ dd {
 
   footer:not(blockquote footer) {
     padding: 3rem;
+  }
+
+  .projects-cards .tag {
+    background-color: var(--background-color-secondary);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .projects-cards .tag:hover {
+    transform: translateY(-2px);
+    background-color: var(--text-color-secondary);
+    color: var(--background-color-primary);
   }
 }
 
@@ -658,65 +766,4 @@ dd {
   to {
     --angle: 360deg;
   }
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0 0 0 / 90%);
-  opacity: 0;
-  transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.modal-open {
-  display: flex;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: auto;
-  padding: 1rem;
-  width: 90%;
-  max-width: 600px;
-  color: var(--background-color-primary);
-}
-
-.modal-description-container {
-  background-color: var(--text-color-secondary);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.4rem;
-}
-
-.modal-description {
-  margin-block-start: 1rem;
-  padding-left: 1rem;
-  font-size: var(--font-size-lg);
-}
-
-.close-button {
-  position: absolute;
-  padding: 0.0625rem 0.5rem;
-  top: 1rem;
-  right: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal-image {
-  width: 100%;
-  height: auto;
 }

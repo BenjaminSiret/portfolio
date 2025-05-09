@@ -43,10 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "flex";
     setTimeout(() => {
       modal.classList.add("modal-open");
-    }, 10); // Petit délai pour permettre l'application de la classe
+    }, 10);
     modalImage.src = article.querySelector("img").src;
     modalDescription.textContent = article.dataset.description;
     modalRepoLink.href = article.dataset.url;
+    
+    // Copier les tags dans la modale
+    const projectTags = article.querySelector(".project-tags");
+    const modalTags = modal.querySelector(".modal-tags");
+    if (projectTags) {
+      modalTags.innerHTML = projectTags.innerHTML;
+    } else {
+      modalTags.innerHTML = "";
+    }
+    
     body.classList.add("body-no-scroll");
     closeModalButton.focus();
   };
