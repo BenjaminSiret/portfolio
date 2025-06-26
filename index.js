@@ -5,15 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".overlay");
   const menuMobileItems = document.querySelectorAll(".menu-mobile-item");
   const body = document.body;
-  const modal = document.getElementById("project-modal");
-  const closeModalButton = document.querySelector(".close-button");
-  const modalDescription = document.querySelector(".modal-description");
-  const modalRepoLink = document.querySelector(".repo-link");
-  const modalImage = document.querySelector(".modal-image");
   const projectArticles = document.querySelectorAll(".projects-cards article");
-  const repoLink = modal.querySelector(".modal-content a");
-  const focusableElements = [closeModalButton, repoLink];
-  let lastFocusedElement;
 
   const toggleMenu = () => {
     const isExpanded = menuMobile.classList.contains("menu-mobile-open");
@@ -29,37 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const handleModalClose = () => {
-    modal.classList.remove("modal-open");
-    setTimeout(() => {
-      modal.style.display = "none";
-      body.classList.remove("body-no-scroll");
-      if (lastFocusedElement) lastFocusedElement.focus();
-    }, 400);
-  };
 
-  const openModal = (article) => {
-    lastFocusedElement = document.activeElement;
-    modal.style.display = "flex";
-    setTimeout(() => {
-      modal.classList.add("modal-open");
-    }, 10);
-    modalImage.src = article.querySelector("img").src;
-    modalDescription.textContent = article.dataset.description;
-    modalRepoLink.href = article.dataset.url;
-    
-    // Copier les tags dans la modale
-    const projectTags = article.querySelector(".project-tags");
-    const modalTags = modal.querySelector(".modal-tags");
-    if (projectTags) {
-      modalTags.innerHTML = projectTags.innerHTML;
-    } else {
-      modalTags.innerHTML = "";
-    }
-    
-    body.classList.add("body-no-scroll");
-    closeModalButton.focus();
-  };
 
   const handleMenuKeyboardNavigation = (e) => {
     const currentIndex = Array.from(menuMobileItems).indexOf(document.activeElement);
@@ -96,24 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const handleModalKeyboardNavigation = (e) => {
-    if (e.key === "Tab") {
-      const firstFocusable = focusableElements[0];
-      const lastFocusable = focusableElements[focusableElements.length - 1];
 
-      if (e.shiftKey) {
-        if (document.activeElement === firstFocusable) {
-          e.preventDefault();
-          lastFocusable.focus();
-        }
-      } else {
-        if (document.activeElement === lastFocusable) {
-          e.preventDefault();
-          firstFocusable.focus();
-        }
-      }
-    }
-  };
 
   const observerElement = (selector, animationClass, delay) => {
     const elements = document.querySelectorAll(selector);
@@ -173,38 +118,4 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("mouseenter", () => handleLinkAnimation(link));
     link.addEventListener("mouseleave", () => handleLinkAnimationExit(link));
   });
-
-  projectArticles.forEach((article) => {
-    article.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal(article);
-    });
-    article.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        openModal(article);
-      }
-    });
-  });
-
-  closeModalButton.addEventListener("click", handleModalClose);
-  closeModalButton.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      handleModalClose();
-    }
-  });
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      handleModalClose();
-    }
-  });
-
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "flex") {
-      handleModalClose();
-    }
-  });
-
-  modal.addEventListener("keydown", handleModalKeyboardNavigation);
 });
